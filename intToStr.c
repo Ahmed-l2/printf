@@ -10,37 +10,37 @@
 
 int intToStr(int num)
 {
-        int length = 0;
-        int isNegative = 0;
-        int digits[14];
+	int length = 0;
+	int isNegative = 0;
+	int digits[14];
 	int i;
 
-        if (num < 0)
-        {
-                putchar('-');
-                isNegative = 1;
-                num = -num;
-        }
+	if (num < 0)
+	{
+		putchar('-');
+		isNegative = 1;
+		num = -num;
+	}
 
-        if (num == 0)
-        {
-                putchar('0');
-                return (1);
-        }
-        else
-        {
-                while (num > 0)
-        {
-                digits[length] = num % 10;
-                num /= 10;
-                length++;
-        }
+	if (num == 0)
+	{
+		putchar('0');
+		return (1);
+	}
+	else
+	{
+		while (num > 0)
+		{
+			digits[length] = num % 10;
+			num /= 10;
+			length++;
+		}
 
-                for (i = length - 1; i >= 0; i--)
-                {
-                        putchar('0' + digits[i]);
-                }
-        }
+		for (i = length - 1; i >= 0; i--)
+		{
+			putchar('0' + digits[i]);
+		}
+	}
 
-        return (length + isNegative);
+	return (length + isNegative);
 }
