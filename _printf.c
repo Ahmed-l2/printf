@@ -29,7 +29,7 @@ int _printf(const char *format, ...)
 			i++;
 			if (format[i] == '%')
 			{
-				len += putchar('%');
+				len += _putchar('%');
 			}
 			else if (format[i] == '\0')
 			{
