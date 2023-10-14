@@ -4,8 +4,8 @@
  * intToStr - Converts an integer to a string and prints it
  * @num: The integer to convert and print
  *
- * Return: The length of the printed string
- * , including negative sign if applicable
+ * Return: The length of the printed string,
+ * including negative sign if applicable
 */
 
 int intToStr(int num)
