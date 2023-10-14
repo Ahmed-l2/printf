@@ -13,6 +13,7 @@ int intToStr(int num)
         int length = 0;
         int isNegative = 0;
         int digits[14];
+	int i;
 
         if (num < 0)
         {
@@ -35,7 +36,7 @@ int intToStr(int num)
                 length++;
         }
 
-                for (int i = length - 1; i >= 0; i--)
+                for (i = length - 1; i >= 0; i--)
                 {
                         putchar('0' + digits[i]);
                 }
