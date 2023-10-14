@@ -17,14 +17,14 @@ int intToStr(int num)
 
 	if (num < 0)
 	{
-		putchar('-');
+		_putchar('-');
 		isNegative = 1;
 		num = -num;
 	}
 
 	if (num == 0)
 	{
-		putchar('0');
+		_putchar('0');
 		return (1);
 	}
 	else
@@ -38,7 +38,7 @@ int intToStr(int num)
 
 		for (i = length - 1; i >= 0; i--)
 		{
-			putchar('0' + digits[i]);
+			_putchar('0' + digits[i]);
 		}
 	}
 
