@@ -15,6 +15,13 @@ int intToStr(int num)
 	int digits[14];
 	int i;
 
+        if (num == INT_MIN)
+        {
+                _putchar('-');
+                _putchar('2');
+                num = 147483648;
+        }
+
 	if (num < 0)
 	{
 		_putchar('-');
