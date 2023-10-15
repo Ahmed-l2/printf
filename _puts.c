@@ -13,7 +13,7 @@ int _puts(char *str)
 
 	if (str == NULL)
 	{
-		_puts("(null)");
+		return (puts("(null)"));
 	}
 	else
 	{
