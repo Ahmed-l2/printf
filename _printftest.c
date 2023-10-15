@@ -10,7 +10,8 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int i = 0, len = 0;
+	int i = 0;
+	int len = 0;
 
 	va_start(args, format);
 	if (!format)
@@ -24,8 +25,8 @@ int _printf(const char *format, ...)
 				len += _putchar('%');
 			else if (format[i] == '\0')
 				return (-1);
-
 			else
+			{
 				switch (format[i])
 				{
 					case 'c':
@@ -39,12 +40,16 @@ int _printf(const char *format, ...)
 						len += intToStr(va_arg(args, int));
 						break;
 					default:
-						len += _putchar('%') + _putchar(format[i]);
+						len += _putchar('%');
+						len += _putchar(format[i]);
 						break;
 				}
+			}
 		}
 		else
+		{
 			len += _putchar(format[i]);
+		}
 		i++;
 	}
 	va_end(args);
