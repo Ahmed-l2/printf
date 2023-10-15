@@ -20,7 +20,7 @@ int intToStr(int num)
         {
                 _putchar('-');
                 _putchar('2');
-                num = 147483648
+                num = 147483648;
                 min = 2;
         }
 
