@@ -9,13 +9,20 @@
 
 int _puts(char *str)
 {
-        int strlen = 0;
+	int strlen = 0;
 
-        while (*str != '\0')
-        {
-                strlen += _putchar(*str);
-                str++;
-        }
+	if (str == NULL)
+	{
+		_puts("(null)");
+	}
+	else
+	{
+		while (*str != '\0')
+		{
+			strlen += _putchar(*str);
+			str++;
+		}
+	}
 
-        return (strlen);
+	return (strlen);
 }
