@@ -14,12 +14,14 @@ int intToStr(int num)
 	int isNegative = 0;
 	int digits[14];
 	int i;
+        int min = 0;
 
         if (num == INT_MIN)
         {
                 _putchar('-');
                 _putchar('2');
-                num = 147483648;
+                num = 147483648
+                min = 2;
         }
 
 	if (num < 0)
@@ -49,5 +51,5 @@ int intToStr(int num)
 		}
 	}
 
-	return (length + isNegative);
+	return (length + isNegative + min);
 }
