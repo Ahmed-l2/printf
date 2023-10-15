@@ -14,19 +14,7 @@ int intToStr(int num)
 	int isNegative = 0;
 	int digits[14];
 	int i;
-<<<<<<< HEAD
 	int min = 0;
-=======
-        int min = 0;
-
-        if (num == INT_MIN)
-        {
-                _putchar('-');
-                _putchar('2');
-                num = 147483648;
-                min = 2;
-        }
->>>>>>> 86ea7aef2b28289c6e5c080bc3c950a7045dc05c
 
 	if (num == INT_MIN)
 	{
