@@ -31,5 +31,5 @@ int handleFormatSpecifier(char specifier, va_list args)
             len += _putchar('%') + _putchar(specifier);
             break;
     }
-    return len;
+    return (len);
 }
