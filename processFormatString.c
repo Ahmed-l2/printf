@@ -9,26 +9,26 @@
 
 int processFormatString(const char *format, va_list args)
 {
-    int i = 0, len = 0;
+	int i = 0, len = 0;
 
-    while (format && format[i])
-    {
-        if (format[i] == '%')
-        {
-            i++;
-            if (format[i] == '%')
-                len += _putchar('%');
-            else if (format[i] == '\0')
-                return (-1);
-                
-            else
-            {
-                len += handleFormatSpecifier(format[i], args);
-            }
-        }
-        else
-            len += _putchar(format[i]);
-        i++;
-    }
-    return (len);
+	while (format && format[i])
+	{
+		if (format[i] == '%')
+		{
+			i++;
+			if (format[i] == '%')
+				len += _putchar('%');
+			else if (format[i] == '\0')
+				return (-1);
+
+			else
+			{
+				len += handleFormatSpecifier(format[i], args);
+			}
+		}
+		else
+			len += _putchar(format[i]);
+		i++;
+	}
+	return (len);
 }
