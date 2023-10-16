@@ -12,6 +12,11 @@ int decToBin(unsigned int num)
 	int i = 0;
 	int j, len = 0;
 
+	if (num == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
 	while (num > 0)
 	{
 		binary[i++] = '0' + (num % 2);
