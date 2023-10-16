@@ -8,7 +8,7 @@
 
 int decToBin(unsigned int num)
 {
-	char binary[];
+	char binary[33];
 	int i = 0;
 	int j, len = 0;
 
