@@ -30,5 +30,5 @@ int processFormatString(const char *format, va_list args)
             len += _putchar(format[i]);
         i++;
     }
-    return len;
+    return (len);
 }
