@@ -26,6 +26,7 @@ int handleFormatSpecifier(char specifier, va_list args)
 			break;
 		case 'u':
 			len += unsignedIntToStr(va_arg(args, unsigned int));
+			break;
 		case 'b':
 			len += decToBin(va_arg(args, unsigned int));
 			break;
