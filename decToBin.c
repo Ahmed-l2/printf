@@ -8,9 +8,9 @@
 
 int decToBin(unsigned int num)
 {
-	char binary[32];
+	char binary[];
 	int i = 0;
-	int j, len;
+	int j, len = 0;
 
 	while (num > 0)
 	{
