@@ -11,6 +11,10 @@
 int intToStr(int num);
 int _puts(char *str);
 int _putchar(char c);
+int processFormatString(const char *format, va_list args);
+int handleFormatSpecifier(char specifier, va_list args);
+unsigned int unsignedIntToStr(unsigned int num);
+int decToBin(unsigned int num);
 int _printf(const char *format, ...);
 
 #endif
