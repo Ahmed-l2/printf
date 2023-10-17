@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * addToHex - Convert a pointer to a hexadecimal representation.
+ * @ptr: The pointer to convert.
+ *
+ * Return: The number of characters printed.
+ */
+
 int addToHex(void *ptr)
 {
         unsigned long int num = (unsigned long int)ptr;
