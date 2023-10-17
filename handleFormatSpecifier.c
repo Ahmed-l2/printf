@@ -30,6 +30,9 @@ int handleFormatSpecifier(char specifier, va_list args)
 		case 'b':
 			len += decToBin(va_arg(args, unsigned int));
 			break;
+		case 'o':
+			len += intToOct(va_arg(args, int));
+			break;
 		default:
 			len += _putchar('%') + _putchar(specifier);
 			break;
