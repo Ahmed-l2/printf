@@ -20,12 +20,12 @@ int charToHex(char c)
 		hexDigit = (uc >> (i * 4)) & 0xF;
 		if (hexDigit < 10)
 		{
-			putchar(hexDigit + '0');
+			_putchar(hexDigit + '0');
 			length += 1;
 		}
 		else
 		{
-			putchar(hexDigit - 10 + 'A');
+			_putchar(hexDigit - 10 + 'A');
 			length += 1;
 		}
 	}
@@ -48,14 +48,14 @@ int convert_S(char *str)
 	{
 		if (str[i] < 32 || str[i] >= 127)
 		{
-			putchar('\\');
-			putchar('x');
+			_putchar('\\');
+			_putchar('x');
 			length += charToHex(str[i]);
 			length += 2;
 		}
 		else
 		{
-			putchar(str[i]);
+			_putchar(str[i]);
 			length += 1;
 		}
 	}
