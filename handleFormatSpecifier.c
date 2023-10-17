@@ -38,7 +38,8 @@ int handleFormatSpecifier(char specifier, va_list args)
 			len += intToHex(specifier, va_arg(args, unsigned int));
 			break;
 		case 'S':
-            len += convert_S(va_arg(args, char *));
+			len += convert_S(va_arg(args, char *));
+			break;
 		default:
 			len += _putchar('%') + _putchar(specifier);
 			break;
