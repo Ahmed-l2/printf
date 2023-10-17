@@ -9,40 +9,38 @@
 
 int addToHex(void *ptr)
 {
-        unsigned long int num = (unsigned long int)ptr;
-        int len = 0;
-        char hexBuffer[20];
-        char reversedBuffer[20];
-        int remainder;
-        int i;
+	unsigned long int num = (unsigned long int)ptr;
+	int len = 0;
+	char hexBuffer[20];
+	char reversedBuffer[20];
+	int remainder;
+	int i;
 
-        if (num == 0)
-        {
-                _putchar('0');
-                return (1);
-        }
-        
+	if (num == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
 
-        while (num > 0)
-        {
-                remainder = num % 16;
-                if (remainder < 10)
-                {
-                        hexBuffer[len] = '0' + remainder;
-                }
-                else
-                {
-                        hexBuffer[len] = 'a' + (remainder - 10);
-                }
-                num /= 16;
-                len++;
-        }
+	while (num > 0)
+	{
+		remainder = num % 16;
+		if (remainder < 10)
+		{
+			hexBuffer[len] = '0' + remainder;
+		}
+		else
+		{
+			hexBuffer[len] = 'a' + (remainder - 10);
+		}
+		num /= 16;
+		len++;
+	}
 
-        for (i = 0; i < len; i++)
-        {
-                reversedBuffer[i] = hexBuffer[len - i - 1];
-        }
+	for (i = 0; i < len; i++)
+	{
+		reversedBuffer[i] = hexBuffer[len - i - 1];
+	}
 
-
-        return (_printf("0x%s", reversedBuffer));
+	return (_printf("0x%s", reversedBuffer));
 }
