@@ -41,6 +41,12 @@ int intToHex_X(unsigned int num)
 	int remainder;
 	int i;
 
+	if (num == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
+
 	while (num > 0)
 	{
 		remainder = num % 16;
@@ -82,6 +88,12 @@ int intToHex_x(unsigned int num)
 	char reversedBuffer[20];
 	int remainder;
 	int i;
+
+	if (num == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
 
 	while (num > 0)
 	{
