@@ -18,8 +18,7 @@ int addToHex(void *ptr)
 
 	if (num == 0)
 	{
-		_putchar('0');
-		return (1);
+		return (_printf("(nil)"));
 	}
 
 	while (num > 0)
