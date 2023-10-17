@@ -16,6 +16,7 @@ int handleFormatSpecifier(char specifier, va_list args);
 unsigned int unsignedIntToStr(unsigned int num);
 int decToBin(unsigned int num);
 int _printf(const char *format, ...);
-int intToOct(int num);
+int intToOct(unsigned int num);
+int intToHex(char specifier, unsigned int num);
 
 #endif

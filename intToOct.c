@@ -6,7 +6,7 @@
  * Return: returns the length
  */
 
-int intToOct(int num)
+int intToOct(unsigned int num)
 {
 	char octalNumber[100];
 	int i = 0, len = 0, j;
