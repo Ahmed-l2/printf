@@ -28,6 +28,13 @@ int charToHex(char c)
     return length;
 }
 
+/**
+ * convert_S - Converts a string, handling non-printable characters.
+ * @str: The string to convert.
+ *
+ * Return: The length of the converted string.
+ */
+
 int convert_S(char *str)
 {
     int length = 0;
