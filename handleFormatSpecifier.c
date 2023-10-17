@@ -40,6 +40,9 @@ int handleFormatSpecifier(char specifier, va_list args)
 		case 'S':
 			len += convert_S(va_arg(args, char *));
 			break;
+		case 'p':
+		    len += addToHex(va_arg(args, void *));
+			break;
 		default:
 			len += _putchar('%') + _putchar(specifier);
 			break;
