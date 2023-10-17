@@ -2,6 +2,13 @@
 
 int charToHex(char c);
 
+/**
+ * charToHex - Converts a character to a hexadecimal representation.
+ * @c: The character to convert.
+ *
+ * Return: The length of the hexadecimal representation.
+ */
+
 int charToHex(char c)
 {
     unsigned char uc = (unsigned char)c;
