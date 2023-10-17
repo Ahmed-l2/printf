@@ -19,6 +19,7 @@ int _printf(const char *format, ...);
 int intToOct(unsigned int num);
 int intToHex(char specifier, unsigned int num);
 int convert_S(char *str);
+int addToHex(void *ptr);
 
 
 #endif
