@@ -41,5 +41,9 @@ int addToHex(void *ptr)
 		reversedBuffer[i] = hexBuffer[len - i - 1];
 	}
 
-	return (_printf("0x%s", reversedBuffer));
+	for (i = 0; i < len; i++)
+	{
+		putchar(reversedBuffer[i]);
+	}
+	return (len);
 }
