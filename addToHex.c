@@ -43,7 +43,7 @@ int addToHex(void *ptr)
 
 	for (i = 0; i < len; i++)
 	{
-		putchar(reversedBuffer[i]);
+		_putchar(reversedBuffer[i]);
 	}
 	return (len);
 }
