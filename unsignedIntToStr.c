@@ -7,7 +7,7 @@
  * Return: The length of the printed string
  */
 
-unsigned int unsignedIntToStr(unsigned int num)
+int unsignedIntToStr(unsigned int num)
 {
 	int length = 0;
 	int digits[14];

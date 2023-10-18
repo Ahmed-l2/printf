@@ -6,7 +6,7 @@
  * Return: returns the length
  */
 
-int intToOct(unsigned int num)
+int intToOct(unsigned int num, int hashFlag)
 {
 	char octalNumber[100];
 	int i = 0, len = 0, j;
@@ -15,6 +15,11 @@ int intToOct(unsigned int num)
 	{
 		_putchar('0');
 		return (1);
+	}
+	else if (hashFlag)
+	{
+		_putchar('0');
+		len++;
 	}
 
 	while (num > 0)

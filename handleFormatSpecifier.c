@@ -8,7 +8,8 @@
  * Return: returns the length of the string
  */
 
-int handleFormatSpecifier(char specifier, va_list args)
+int handleFormatSpecifier(char specifier, va_list args, int plusFlag,
+		int spaceFlag, int hashFlag)
 {
 	int len = 0;
 
@@ -22,7 +23,7 @@ int handleFormatSpecifier(char specifier, va_list args)
 			break;
 		case 'd':
 		case 'i':
-			len += intToStr(va_arg(args, int));
+			len += intToStr(va_arg(args, int), plusFlag, spaceFlag);
 			break;
 		case 'u':
 			len += unsignedIntToStr(va_arg(args, unsigned int));
@@ -31,11 +32,11 @@ int handleFormatSpecifier(char specifier, va_list args)
 			len += decToBin(va_arg(args, unsigned int));
 			break;
 		case 'o':
-			len += intToOct(va_arg(args, unsigned int));
+			len += intToOct(va_arg(args, unsigned int), hashFlag);
 			break;
 		case 'x':
 		case 'X':
-			len += intToHex(specifier, va_arg(args, unsigned int));
+			len += intToHex(specifier, va_arg(args, unsigned int), hashFlag);
 			break;
 		case 'S':
 			len += convert_S(va_arg(args, char *));

@@ -1,7 +1,7 @@
 #include "main.h"
 
-int intToHex_x(unsigned int num);
-int intToHex_X(unsigned int num);
+int intToHex_x(unsigned int num, int hashFlag);
+int intToHex_X(unsigned int num, int hashFlag);
 
 /**
  * intToHex - function that handles the conversion of integer to a hexdecimal
@@ -10,17 +10,17 @@ int intToHex_X(unsigned int num);
  * Return: returns length
  */
 
-int intToHex(char specifier, unsigned int num)
+int intToHex(char specifier, unsigned int num, int hashFlag)
 {
 	int len = 0;
 
 	if (specifier == 'X')
 	{
-		len = intToHex_X(num);
+		len = intToHex_X(num, hashFlag);
 	}
 	else
 	{
-		len = intToHex_x(num);
+		len = intToHex_x(num, hashFlag);
 	}
 
 	return (len);
@@ -33,7 +33,7 @@ int intToHex(char specifier, unsigned int num)
  */
 
 
-int intToHex_X(unsigned int num)
+int intToHex_X(unsigned int num, int hashFlag)
 {
 	int len = 0;
 	char hexBuffer[20];
@@ -45,6 +45,11 @@ int intToHex_X(unsigned int num)
 	{
 		_putchar('0');
 		return (1);
+	}
+	else if (hashFlag)
+	{
+		_putchar('0');
+		_putchar('X');
 	}
 
 	while (num > 0)
@@ -72,7 +77,7 @@ int intToHex_X(unsigned int num)
 		_putchar(reversedBuffer[i]);
 	}
 
-	return (len);
+	return (len + (hashFlag ? 2 : 0));
 }
 
 /**
@@ -81,7 +86,7 @@ int intToHex_X(unsigned int num)
  * Return: returns length
  */
 
-int intToHex_x(unsigned int num)
+int intToHex_x(unsigned int num, int hashFlag)
 {
 	int len = 0;
 	char hexBuffer[20];
@@ -93,6 +98,11 @@ int intToHex_x(unsigned int num)
 	{
 		_putchar('0');
 		return (1);
+	}
+	else if (hashFlag)
+	{
+		_putchar('0');
+		_putchar('X');
 	}
 
 	while (num > 0)
@@ -120,5 +130,5 @@ int intToHex_x(unsigned int num)
 		_putchar(reversedBuffer[i]);
 	}
 
-	return (len);
+	return (len + (hashFlag ? 2 : 0));
 }

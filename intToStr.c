@@ -8,13 +8,9 @@
  * including negative sign if applicable
 */
 
-int intToStr(int num)
+int intToStr(int num, int plusFlag, int spaceFlag)
 {
-	int length = 0;
-	int isNegative = 0;
-	int digits[14];
-	int i;
-	int min = 0;
+	int length = 0, isNegative = 0, digits[14], i, min = 0;
 
 	if (num == INT_MIN)
 	{
@@ -29,6 +25,10 @@ int intToStr(int num)
 		isNegative = 1;
 		num = -num;
 	}
+	else if (plusFlag)
+		_putchar('+');
+	else if (spaceFlag)
+		_putchar(' ');
 	if (num == 0)
 	{
 		_putchar('0');
@@ -48,5 +48,5 @@ int intToStr(int num)
 			_putchar('0' + digits[i]);
 		}
 	}
-	return (length + isNegative + min);
+	return (length + isNegative + min + plusFlag + spaceFlag);
 }
