@@ -105,7 +105,7 @@ int intToHex_x(unsigned int num, int hashFlag)
 	else if (hashFlag)
 	{
 		_putchar('0');
-		_putchar('X');
+		_putchar('x');
 	}
 
 	while (num > 0)
