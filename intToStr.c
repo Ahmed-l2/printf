@@ -3,7 +3,8 @@
 /**
  * intToStr - Converts an integer to a string and prints it
  * @num: The integer to convert and print
- *
+ * @plusFlag: checks for '+' flag
+ * @spaceFlag: checks for the ' ' (space) flag
  * Return: The length of the printed string,
  * including negative sign if applicable
 */

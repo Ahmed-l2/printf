@@ -7,6 +7,7 @@ int intToHex_X(unsigned int num, int hashFlag);
  * intToHex - function that handles the conversion of integer to a hexdecimal
  * @specifier: checks if the specific is X or x
  * @num: given int
+ * @hashFlag: checks for the '#' flag
  * Return: returns length
  */
 
@@ -29,6 +30,7 @@ int intToHex(char specifier, unsigned int num, int hashFlag)
 /**
  * intToHex_X - handles the %x conversion
  * @num: given integer
+ * @hashFlag: checks for the '#' flag
  * Return: returns length
  */
 
@@ -83,6 +85,7 @@ int intToHex_X(unsigned int num, int hashFlag)
 /**
  * intToHex_x - handles the %x conversion
  * @num: given integer
+ * @hashFlag: checks for the '#' flag
  * Return: returns length
  */
 

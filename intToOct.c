@@ -3,6 +3,7 @@
 /**
  * intToOct - function that converts an int to its octal value
  * @num: given integer
+ * @hashFlag: checks for the '#' flag
  * Return: returns the length
  */
 

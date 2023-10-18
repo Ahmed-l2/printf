@@ -5,6 +5,9 @@
  * the corresponding specifier
  * @specifier: format specifier
  * @args: uses the va_list args to choose the corresponding variable
+ * @plusFlag: checks for '+' flag
+ * @spaceFlag: checks for the ' ' (space) flag
+ * @hashFlag: checks for the '#' flag
  * Return: returns the length of the string
  */
 
