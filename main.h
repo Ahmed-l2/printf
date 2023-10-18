@@ -9,7 +9,8 @@
 
 int _printf(const char *format, ...);
 int processFormatString(const char *format, va_list args);
-int handleFormatSpecifier(char specifier, va_list args, int plusFlag, int spaceFlag, int hashFlag);
+int handleFormatSpecifier(char specifier, va_list args, int plusFlag,
+		int spaceFlag, int hashFlag);
 int intToStr(int num, int plusFlag, int spaceFlag);
 int unsignedIntToStr(unsigned int num);
 int intToHex(char specifier, unsigned int num, int hashFlag);
