@@ -41,9 +41,13 @@ int addToHex(void *ptr)
 		reversedBuffer[i] = hexBuffer[len - i - 1];
 	}
 
+	_putchar('0');
+	_putchar('x');
 	for (i = 0; i < len; i++)
 	{
+		reversedBuffer[i] = hexBuffer[len - i - 1];
 		_putchar(reversedBuffer[i]);
 	}
-	return (len);
+
+	return (len + 2);
 }
