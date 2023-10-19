@@ -5,6 +5,11 @@ int rev_str(char *str)
 	int len = 0;
 	int i;
 
+	if (!str)
+	{
+		str = "(null)";
+	}
+
 	while (str[len] != '\0')
 	{
 		len++;
