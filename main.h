@@ -18,6 +18,7 @@ int intToOct(unsigned int num, int hashFlag);
 int decToBin(unsigned int num);
 int _putchar(char c);
 int _puts(char *str);
+int rev_str(char *str);
 int convert_S(char *str);
 int addToHex(void *ptr);
 

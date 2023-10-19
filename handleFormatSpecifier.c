@@ -47,6 +47,9 @@ int handleFormatSpecifier(char specifier, va_list args, int plusFlag,
 		case 'p':
 		    len += addToHex(va_arg(args, void *));
 			break;
+		case 'r':
+			len += rev_str(va_arg(args, char *));
+			break;
 		default:
 			len += _putchar('%') + _putchar(specifier);
 			break;
