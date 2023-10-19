@@ -5,19 +5,17 @@ int rev_str(char *str)
 	int len = 0;
 	int i;
 
-	if (!str)
+	if (str)
 	{
-		str = "(null)";
-	}
+		while (str[len] != '\0')
+		{
+			len++;
+		}
 
-	while (str[len] != '\0')
-	{
-		len++;
-	}
-
-	for (i = len; i >= 0; i--)
-	{
-		_putchar(str[i]);
+		for (i = len; i >= 0; i--)
+		{
+			_putchar(str[i]);
+		}
 	}
 
 	return (len);
