@@ -17,6 +17,11 @@ int rev_str(char *str)
 			_putchar(str[i]);
 		}
 	}
+	else
+	{
+		_printf("(llun)");
+		return (6);
+	}
 
 	return (len);
 }
