@@ -9,20 +9,39 @@
 
 int rot13_encrypt(char *str)
 {
-	if (str == NULL)
-		return (0);
+	int i = 0, j, len = 0;
+	char *temp;
 
-	int length = 0;
-	while (*str)
+	while (str[len] != '\0')
 	{
-		if ((*str >= 'A' && *str <= 'Z') || (*str >= 'a' && *str <= 'z'))
-		{
-			char base = (*str >= 'A' && *str <= 'Z') ? 'A' : 'a';
-			*str = (*str - base + 13) % 26 + base;
-		}
-		putchar(*str);
-		str++;
-		length++;
+		len++;
 	}
-	return length;
+
+	temp = malloc(len * sizeof(char));
+	while (str[i] != '\0')
+	{
+		if ((str[i] >= 'a' && str[i] <= 'm') || (str[i] >= 'A' && str[i] <= 'M'))
+		{
+			temp[i] = str[i] + 13;
+		}
+		else if
+			((str[i] >= 'n' && str[i] <= 'z') || (str[i] >= 'N' && str[i] <= 'Z'))
+		{
+			temp[i] = str[i] - 13;
+		}
+		else
+		{
+			(temp[i] = str[i]);
+		}
+		i++;
+	}
+	temp[i] = '\0';
+
+	for (j = 0; temp[j] != '\0'; j++)
+	{
+		_putchar(temp[j]);
+	}
+	free(temp);
+
+	return (len);
 }
