@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * rot13_encrypt - Encrypts a string using the ROT13 algorithm.
+ * @str: The string to be encrypted.
+ *
+ * Return: The length of the string.
+ */
+
 int rot13_encrypt(char *str)
 {
     if (str == NULL)
