@@ -1,5 +1,7 @@
 #include "main.h"
 
+int handleOtherSpecifier(char specifier, va_list args, int plusFlag,
+		int spaceFlag, int hashFlag);
 /**
  * handleFormatSpecifier - handles the formatting for
  * the corresponding specifier
@@ -11,7 +13,7 @@
  * Return: returns the length of the string
  */
 
-int handleFormatSpecifier(char specifier, va_list args, int plusFlag,
+int handleSpecifier(char specifier, va_list args, int plusFlag,
 		int spaceFlag, int hashFlag)
 {
 	int len = 0;
@@ -45,13 +47,31 @@ int handleFormatSpecifier(char specifier, va_list args, int plusFlag,
 			len += convert_S(va_arg(args, char *));
 			break;
 		case 'p':
-		    len += addToHex(va_arg(args, void *));
-			break;
-		case 'r':
-			len += rev_str(va_arg(args, char *));
+			len += addToHex(va_arg(args, void *));
 			break;
 		default:
-			len += _putchar('%') + _putchar(specifier);
+			len += handleOtherSpecifier(specifier, args, plusFlag, spaceFlag, hashFlag);
 			break;
-	}	return (len);
+	}
+	return (len);
+}
+
+int handleOtherSpecifier(char specifier, va_list args, int plusFlag,
+		int spaceFlag, int hashFlag)
+{
+		int len = 0;
+		(void)plusFlag;
+		(void)spaceFlag;
+		(void)hashFlag;
+
+		switch (specifier)
+		{
+			case 'r':
+				len += rev_str(va_arg(args, char *));
+				break;
+			default:
+				len += _putchar('%') + _putchar(specifier);
+				break;
+		}
+		return (len);
 }

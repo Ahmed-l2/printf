@@ -39,7 +39,7 @@ int processFormatString(const char *format, va_list args)
 					i++;
 				}
 
-				len += handleFormatSpecifier(format[i], args,
+				len += handleSpecifier(format[i], args,
 						plusFlag, spaceFlag, hashFlag);
 			}
 		}

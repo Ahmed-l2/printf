@@ -9,7 +9,7 @@
 
 int _printf(const char *format, ...);
 int processFormatString(const char *format, va_list args);
-int handleFormatSpecifier(char specifier, va_list args, int plusFlag,
+int handleSpecifier(char specifier, va_list args, int plusFlag,
 		int spaceFlag, int hashFlag);
 int intToStr(int num, int plusFlag, int spaceFlag);
 int unsignedIntToStr(unsigned int num);
