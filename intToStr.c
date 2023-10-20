@@ -14,14 +14,16 @@ int intToStr(int num, int plusFlag, int spaceFlag)
 	int length = 0, isNegative = 0, digits[14], i, min = 0;
 
 	if (num == 0 && plusFlag)
-		_putchar('+');
-		_putchar('0');
+	{
+		_putchar('+'), _putchar('0');
 		return (2);
+	}
 	if (num == INT_MIN)
-		_putchar('-');
-		_putchar('2');
+	{
+		_putchar('-'), _putchar('2');
 		num = 147483648;
 		min = 2;
+	}
 	if (num < 0)
 	{
 		_putchar('-');
