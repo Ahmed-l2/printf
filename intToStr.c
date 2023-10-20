@@ -33,9 +33,10 @@ int intToStr(int num, int plusFlag, int spaceFlag)
 	else if (spaceFlag)
 		_putchar(' ');
 	if (num == 0)
+	{
 		_putchar('0');
 		return (1);
-
+	}
 	else
 	{
 		while (num > 0)
@@ -44,11 +45,8 @@ int intToStr(int num, int plusFlag, int spaceFlag)
 			num /= 10;
 			length++;
 		}
-
 		for (i = length - 1; i >= 0; i--)
-		{
 			_putchar('0' + digits[i]);
-		}
 	}
 	return (length + isNegative + min + plusFlag + spaceFlag);
 }
