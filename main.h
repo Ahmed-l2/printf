@@ -21,5 +21,8 @@ int _puts(char *str);
 int rev_str(char *str);
 int convert_S(char *str);
 int addToHex(void *ptr);
+int rot13_encrypt(char *str);
+
+
 
 #endif
