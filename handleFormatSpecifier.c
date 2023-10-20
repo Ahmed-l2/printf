@@ -70,8 +70,8 @@ int handleOtherSpecifier(char specifier, va_list args, int plusFlag,
 				len += rev_str(va_arg(args, char *));
 				break;
 			case 'R':
-                len += rot13_encrypt(va_arg(args, char *));
-                break;
+				len += rot13_encrypt(va_arg(args, char *));
+				break;
 			default:
 				len += _putchar('%') + _putchar(specifier);
 				break;
