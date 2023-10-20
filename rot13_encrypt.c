@@ -18,6 +18,11 @@ int rot13_encrypt(char *str)
 	}
 
 	temp = malloc(len * sizeof(char));
+
+	if (temp == NULL)
+	{
+		return (0);
+	}
 	while (str[i] != '\0')
 	{
 		if ((str[i] >= 'a' && str[i] <= 'm') || (str[i] >= 'A' && str[i] <= 'M'))
