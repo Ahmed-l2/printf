@@ -26,3 +26,4 @@ int rev_str(char *str)
 	}
 
 	return (len);
+}
