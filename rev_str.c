@@ -19,7 +19,7 @@ int rev_str(char *str)
 	}
 	else
 	{
-		_printf("(llun)");
+		_printf(")llun(");
 		return (6);
 	}
 
